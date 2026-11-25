@@ -36,7 +36,10 @@ assets/
 - Reprodução silenciosa e automática, em loop de sequência, com transição suave.
 - Pausam fora da tela e com a aba em segundo plano.
 - Com `prefers-reduced-motion`, economia de dados ou conexão 2G, aparece só o pôster estático.
-- Os arquivos são trechos de 8 s; não representam os vídeos integrais.
+- O quadro "Behind the Decks" é só visual: sem botões, sem links e sem player do YouTube.
+- Enquadramento individual por clipe no array `clips` (`d` = computador, `m` = celular; `cover` preenche, `contain` mostra inteiro sem cortes).
+- Se a reprodução automática for bloqueada, fica o pôster estático (`assets/videos/*-poster.*`) e o vídeo inicia no primeiro toque.
+- Qualidade: os MP4 atuais são trechos de 8 s já muito comprimidos (~1 Mbps em 720p). Para melhorar, substitua os arquivos mantendo os mesmos nomes (H.264, sem áudio, `+faststart`), sem mexer no código.
 
 ## Antes do lançamento
 
