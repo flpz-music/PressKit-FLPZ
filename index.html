@@ -186,21 +186,30 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var
 @media(max-width:360px){.music-card-bottom h3{font-size:24px}.round-arrow{width:46px;height:46px}.soundcloud-strip{padding:20px 18px}.music-art{padding:16px;min-height:220px}.music-art small{font-size:9px;letter-spacing:1.2px}.art-two>span{font-size:11.5vw}}
 
 /* ---------- 05 · Experiência: sequência de vídeos ---------- */
-.video-cover{background:#070D1C;cursor:default;border-color:#243764}
+.video-cover{background:radial-gradient(ellipse at 80% 30%,rgba(75,127,255,.26) 0,transparent 48%),linear-gradient(145deg,#12204a,#070D1C 76%);cursor:default;border-color:#243764}
 .video-cover:hover .video-graphic{filter:none}
-.reel{position:absolute;inset:0;overflow:hidden;background:#0b1631;z-index:0;isolation:isolate}
-.reel-poster,.reel-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.reel-bg{background-size:cover;background-position:center;filter:blur(30px) brightness(.72) saturate(1.05);transform:scale(1.18);opacity:0;transition:opacity .8s ease}
-.reel[data-portrait="1"] .reel-bg{opacity:1}
-.reel-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;z-index:1;transition:opacity 1s ease;pointer-events:none;background:transparent}
+.reel{display:block;position:absolute;inset:0;z-index:0;pointer-events:none}
+.reel-stage{position:absolute;top:0;bottom:0;right:clamp(22px,7%,110px);aspect-ratio:9/16;height:100%;background:#050a18;overflow:hidden;box-shadow:0 0 0 1px rgba(119,153,247,.2),0 30px 80px -34px rgba(0,0,0,.85)}
+.reel-poster,.reel-video{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:center;transform:none}
+.reel-video{opacity:0;z-index:1;transition:opacity 1s ease;pointer-events:none;background:transparent}
 .reel-video.is-on{opacity:1;z-index:2}
 .reel-video.is-leaving{opacity:1;z-index:1;transition:none}
 .reel.is-static .reel-video{display:none}
 .video-graphic,.video-caption{z-index:3}
-.video-graphic{background:linear-gradient(90deg,rgba(7,13,28,.52) 0,rgba(7,13,28,.2) 46%,rgba(7,13,28,0) 74%),linear-gradient(0deg,rgba(7,13,28,.42),transparent 30%)}
-.video-graphic strong{text-shadow:0 2px 28px rgba(7,13,28,.5)}
-.video-caption{color:#d3dcf5}
+.video-graphic{background:none}
+.video-graphic strong{max-width:54%;text-shadow:none}
+.video-caption{color:#c3cfef}
 .video-graphic-top,.video-graphic-bottom{color:#b4c6ff}
+@media(max-width:760px){
+ .video-cover{display:flex;flex-direction:column;align-items:flex-start;aspect-ratio:auto;min-height:0;padding:26px 22px 24px}
+ .video-graphic{display:contents}
+ .video-graphic-top{order:1;position:static}
+ .video-graphic strong{order:2;position:static;max-width:100%;margin:14px 0 24px;font-size:clamp(47px,13vw,78px);line-height:1}
+ .reel{order:3;position:relative;inset:auto;align-self:center;width:min(100%,320px)}
+ .reel-stage{display:block;position:relative;top:auto;bottom:auto;right:auto;height:auto;width:100%}
+ .video-graphic-bottom{order:4;position:static;margin-top:22px}
+ .video-caption{order:5;position:static;margin-top:10px;padding:0}
+}
 .experience-footer{color:#97a5c8}
 
 /* ---------- 06 · Press Material: seção reequilibrada ---------- */
@@ -296,7 +305,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var
 <section class="section container about-section" id="sobre"><div class="section-index reveal"><span>01 — O ARTISTA</span><span>BEHIND THE SOUND</span></div><div class="about-grid"><div class="reveal"><p class="overline">IDENTIDADE & TRAJETÓRIA</p><h2>FEITO<br>PARA <span>A</span><br>PISTA<span class="blue-dot">.</span></h2><div class="about-chips"><span>HOUSE</span><span>TECH HOUSE</span><span>INDIE DANCE</span></div></div><div class="about-body reveal"><p class="large-copy">Uma identidade construída em movimento, entre referências, ritmos e conexões reais.</p><p>Das raízes do funk à música eletrônica, FLPZ desenvolveu uma linguagem própria entre House, Tech House e Indie Dance. Com leitura de pista e uma abordagem dinâmica, já se apresentou em cidades do Piauí, Maranhão e Ceará.</p><p>Com formação pela IGroove, lançamentos por selos como Luna Records e 247.addiction e colaborações com Tineway, sua trajetória inclui line-ups com Liu, Future Class, MC Daniel e Rogerinho, além de suportes de KVSH e Buja (BR).</p><p>Residente em Teresina e idealizador da <strong>Frequency Culture</strong>, trabalha para impulsionar a cena e criar experiências que vão além do set.</p><a class="inline-link" href="https://drive.google.com/drive/folders/1d7ybWCoztCVQy2gDwIk-0MROe53LjPfp?usp=drive_link" target="_blank" rel="noopener noreferrer">Press Kit <span>↗</span></a></div></div><div class="credentials reveal"><div><small>BASE</small><strong>TERESINA, PI</strong></div><div><small>ATUAÇÃO</small><strong>PI · MA · CE</strong></div><div><small>PROJETO</small><strong><a href="https://www.instagram.com/frqncyculture_/" target="_blank" rel="noopener noreferrer" aria-label="Frequency Culture no Instagram (abre em nova aba)">FREQUENCY CULTURE <span aria-hidden="true">↗</span></a></strong></div></div></section>
 <section class="section music-section" id="musica"><div class="container"><div class="section-index reveal"><span>02 — MÚSICA</span><span>LISTEN TO THE FREQUENCY</span></div><div class="music-heading reveal"><div><p class="overline">O QUE MOVE A PISTA</p><h2>THIS IS<br><i>THE SOUND.</i></h2></div><p>Lançamentos, sets e uma seleção feita para quem vive a música eletrônica.</p></div><div class="music-grid"><article class="music-feature reveal"><div class="music-card-head"><span>01 / ARTIST PROFILE</span><span>SPOTIFY ↗</span></div><div class="music-art art-one" aria-hidden="true"><span>FLPZ<span class="blue-dot">.</span></span><small>SELECTED RELEASES</small></div><div class="music-card-bottom"><div><span class="card-kicker">DISCOVER</span><h3>Discografia</h3></div><a class="round-arrow" href="https://open.spotify.com/artist/67PtwjxLXEgYejLEvLsMa2" target="_blank" rel="noopener noreferrer" aria-label="Abrir discografia FLPZ no Spotify">↗</a></div><details class="player-details"><summary>Ouvir aqui <span>+</span></summary><iframe title="Discografia FLPZ no Spotify" loading="lazy" src="https://open.spotify.com/embed/artist/67PtwjxLXEgYejLEvLsMa2?utm_source=generator&theme=0" height="152" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe></details></article>
 <article class="music-feature reveal"><div class="music-card-head"><span>02 / FEATURED RELEASE</span><span>SPOTIFY ↗</span></div><div class="music-art art-two" aria-hidden="true"><span>THE<br>RELEASE.</span><small>OUÇA O LANÇAMENTO NO SPOTIFY</small></div><div class="music-card-bottom"><div><span class="card-kicker">LISTEN</span><h3>Lançamento</h3></div><a class="round-arrow" href="https://open.spotify.com/album/3UMYtEyNNxWwYcOiI97MEw" target="_blank" rel="noopener noreferrer" aria-label="Ouvir lançamento de FLPZ">↗</a></div><details class="player-details"><summary>Ouvir aqui <span>+</span></summary><iframe title="Lançamento FLPZ no Spotify" loading="lazy" src="https://open.spotify.com/embed/album/3UMYtEyNNxWwYcOiI97MEw?utm_source=generator&theme=0" height="152" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe></details></article></div><a class="soundcloud-strip reveal" href="https://soundcloud.com/flpz_music" target="_blank" rel="noopener noreferrer"><span><span class="small-label">SETS & MIXES</span><strong>Continue ouvindo no SoundCloud</strong></span><span class="strip-arrow">↗</span></a></div></section>
-<section class="section experience-section container" id="experiencia"><div class="section-index reveal"><span>03 — EXPERIÊNCIA</span><span>THE ENERGY IN MOTION</span></div><div class="experience-top reveal"><div><p class="overline">A PERFORMANCE</p><h2>FEEL<br>THE <i>ENERGY.</i></h2></div><p>Não é só o que toca. É a forma como a música encontra cada momento da pista.</p></div><div class="video-cover reveal" id="videoStage" role="group" aria-label="Behind the Decks: trechos de apresentações de FLPZ em vídeo, sem áudio"><span class="reel" id="reel" aria-hidden="true"><img class="reel-poster" src="assets/videos/IMG_6193-poster.jpg" alt="" width="1280" height="720" loading="lazy" decoding="async"><span class="reel-bg" id="reelBg"></span><video class="reel-video" id="reelA" muted playsinline webkit-playsinline preload="none" disablepictureinpicture disableremoteplayback tabindex="-1"></video><video class="reel-video" id="reelB" muted playsinline webkit-playsinline preload="none" disablepictureinpicture disableremoteplayback tabindex="-1"></video></span><span class="video-graphic"><span class="video-graphic-top">FLPZ / PERFORMANCE</span><strong>BEHIND<br>THE <em>DECKS.</em></strong><span class="video-graphic-bottom">MUSIC IS THE CONNECTION. ◉</span></span><span class="video-caption"><span>FLPZ / LIVE EXPERIENCE</span></span></div><div class="experience-footer"><span>VIDEO / PERFORMANCE</span><a class="inline-link" href="https://www.youtube.com/@flpz.music1" target="_blank" rel="noopener noreferrer">VER CANAL NO YOUTUBE <span>↗</span></a></div></section>
+<section class="section experience-section container" id="experiencia"><div class="section-index reveal"><span>03 — EXPERIÊNCIA</span><span>THE ENERGY IN MOTION</span></div><div class="experience-top reveal"><div><p class="overline">A PERFORMANCE</p><h2>FEEL<br>THE <i>ENERGY.</i></h2></div><p>Não é só o que toca. É a forma como a música encontra cada momento da pista.</p></div><div class="video-cover reveal" id="videoStage" role="group" aria-label="Behind the Decks: trechos de apresentações de FLPZ em vídeo, sem áudio"><span class="reel" id="reel" aria-hidden="true"><span class="reel-stage"><img class="reel-poster" src="assets/videos/IMG_6193-poster.jpg" alt="" width="1280" height="720" loading="lazy" decoding="async"><video class="reel-video" id="reelA" muted playsinline webkit-playsinline preload="none" disablepictureinpicture disableremoteplayback tabindex="-1"></video><video class="reel-video" id="reelB" muted playsinline webkit-playsinline preload="none" disablepictureinpicture disableremoteplayback tabindex="-1"></video></span></span><span class="video-graphic"><span class="video-graphic-top">FLPZ / PERFORMANCE</span><strong>BEHIND<br>THE <em>DECKS.</em></strong><span class="video-graphic-bottom">MUSIC IS THE CONNECTION. ◉</span></span><span class="video-caption"><span>FLPZ / LIVE EXPERIENCE</span></span></div><div class="experience-footer"><span>VIDEO / PERFORMANCE</span><a class="inline-link" href="https://www.youtube.com/@flpz.music1" target="_blank" rel="noopener noreferrer">VER CANAL NO YOUTUBE <span>↗</span></a></div></section>
 <section class="section press-section" id="imprensa"><div class="container"><div class="section-index reveal"><span>04 — PRESS MATERIAL</span><span>EVERYTHING IN ONE PLACE</span></div><div class="press-grid reveal"><div><p class="overline">MATERIAL OFICIAL</p><h2>PRONTO<br>PARA <i>O SHOW.</i></h2></div><div class="press-copy"><p>Conheça os materiais oficiais do FLPZ e entre em contato para levar essa experiência ao seu evento.</p><a class="btn btn-primary full-btn" href="https://wa.me/5586994556828?text=Ol%C3%A1%21%20Gostaria%20de%20consultar%20a%20disponibilidade%20do%20FLPZ%20para%20um%20evento." target="_blank" rel="noopener noreferrer">Vamos marcar uma data? <span>↗</span></a></div></div><div class="press-rows reveal"><a href="https://drive.google.com/drive/folders/1d7ybWCoztCVQy2gDwIk-0MROe53LjPfp?usp=drive_link" target="_blank" rel="noopener noreferrer"><span>01</span><strong>MATERIAIS PARA DIVULGAÇÃO</strong><span>↗</span></a></div></section>
 <section class="booking-section" id="booking"><div class="container"><div class="booking-top reveal"><span>05 — BOOKING & CONTACT</span><span>LET'S MAKE IT HAPPEN</span></div><div class="booking-heading reveal"><p>O PRÓXIMO ENCONTRO É NA PISTA.</p><h2>LET'S<br>CONNECT<span>.</span></h2></div><div class="booking-bottom reveal"><p>Shows, festivais, clubs, eventos privados e colaborações. Entre em contato para consultar datas e propostas.</p><div class="booking-actions"><a class="btn btn-light" href="https://wa.me/5586994556828?text=Ol%C3%A1%21%20Gostaria%20de%20consultar%20a%20disponibilidade%20do%20FLPZ%20para%20um%20evento." target="_blank" rel="noopener noreferrer">Solicitar booking <span>↗</span></a><a class="booking-email" href="mailto:flpz.music@gmail.com">flpz.music@gmail.com ↗</a></div></div></div></section>
 </main><a class="back-to-top" href="#inicio" aria-label="Voltar ao início da página"><span aria-hidden="true">↑</span></a>
@@ -353,33 +362,29 @@ stage.addEventListener('pointerup',e=>{if(sid!==e.pointerId)return;sid=null;cons
 stage.addEventListener('pointercancel',()=>{sid=null},{passive:true});
 })();
 ;(()=>{const reel=document.getElementById('reel');if(!reel)return;
-/* Enquadramento individual: d = desktop/tablet, m = celular (<=760px). cover = preenche o quadro; contain = vídeo inteiro (sem cortes). */
+/* Todos os clipes usam o MESMO palco 9:16 (object-fit:contain, sem zoom nem recorte).
+   v:true = arquivo vertical 9:16 (preenche o palco). Arquivos horizontais aparecem inteiros, centralizados no palco. */
 const clips=[
-{src:'assets/videos/IMG_6193-preview.mp4',poster:'assets/videos/IMG_6193-poster.jpg',d:{fit:'cover',pos:'50% 50%'},m:{fit:'cover',pos:'52% 50%'}},
-{src:'assets/videos/IMG_6509-preview.mp4',poster:'assets/videos/IMG_6509-poster.webp',d:{fit:'contain',pos:'78% 50%'},m:{fit:'cover',pos:'50% 82%'}},
-{src:'assets/videos/IMG_5670-preview.mp4',poster:'assets/videos/IMG_5670-poster.webp',d:{fit:'cover',pos:'50% 50%'},m:{fit:'cover',pos:'68% 50%'}},
-{src:'assets/videos/IMG_4246-preview.mp4',poster:'assets/videos/IMG_4246-poster.webp',d:{fit:'cover',pos:'50% 45%'},m:{fit:'cover',pos:'92% 50%'}}
+{src:'assets/videos/IMG_6193-preview.mp4',v:false},
+{src:'assets/videos/IMG_6509-preview.mp4',v:true},
+{src:'assets/videos/IMG_5670-preview.mp4',v:false},
+{src:'assets/videos/IMG_4246-preview.mp4',v:false}
 ];
-const mq=matchMedia('(max-width:760px)');
-const cfg=i=>mq.matches?clips[i].m:clips[i].d;
-const full=i=>cfg(i).fit==='cover';
 const conn=navigator.connection||{};
 const still=matchMedia('(prefers-reduced-motion: reduce)').matches||conn.saveData||/(^|-)2g$/.test(conn.effectiveType||'');
 if(still){reel.classList.add('is-static');return}
-const vids=[document.getElementById('reelA'),document.getElementById('reelB')],bg=document.getElementById('reelBg');
+const vids=[document.getElementById('reelA'),document.getElementById('reelB')];
 vids.forEach(v=>{v.muted=true;v.defaultMuted=true;v.playsInline=true;v.loop=false;v.setAttribute('webkit-playsinline','')});
 let cur=0,slot=0,switching=false,visible=false,started=false,blocked=false;
-const frame=(v,i)=>{const c=cfg(i);v.style.objectFit=c.fit;v.style.objectPosition=c.pos};
-const load=(v,i)=>{v.dataset.clip=i;frame(v,i);v.preload='auto';v.src=clips[i].src;v.load()};
-const showBg=i=>{bg.style.backgroundImage='url('+clips[i].poster+')';reel.dataset.portrait=full(i)?'0':'1'};
+const load=(v,i)=>{v.dataset.clip=i;v.preload='auto';v.src=clips[i].src;v.load()};
 const go=()=>{
  if(switching)return;const a=vids[slot],b=vids[1-slot],n=(cur+1)%clips.length;
  if(+b.dataset.clip!==n)return;
  const doSwitch=()=>{if(switching)return;switching=true;b.currentTime=0;
   const p=b.play();
-  const swap=()=>{showBg(n);
-   /* Se o próximo preenche o quadro, o atual fica por baixo até o fim do fade (sem "buraco" escuro). */
-   if(full(n))a.classList.add('is-leaving');
+  const swap=()=>{
+   /* Próximo clipe vertical preenche o palco todo: o atual fica por baixo até o fim do fade (sem "buraco"). */
+   if(clips[n].v)a.classList.add('is-leaving');
    a.classList.remove('is-on');b.classList.add('is-on');
    setTimeout(()=>{a.classList.remove('is-leaving');a.pause();cur=n;slot=1-slot;switching=false;load(a,(cur+1)%clips.length)},1000)};
   if(p&&p.then)p.then(swap).catch(()=>{switching=false});else swap()};
@@ -389,14 +394,13 @@ vids.forEach(v=>{
  v.addEventListener('ended',()=>{if(v===vids[slot])go()});
  v.addEventListener('error',()=>{reel.classList.add('is-static')},{once:true})});
 const tryPlay=v=>{const p=v.play();if(p&&p.catch)p.catch(()=>{blocked=true})};
-const start=()=>{if(started)return;started=true;const a=vids[0];load(a,0);showBg(0);
+const start=()=>{if(started)return;started=true;const a=vids[0];load(a,0);
  a.addEventListener('playing',()=>{blocked=false;a.classList.add('is-on');load(vids[1],1)},{once:true});
  tryPlay(a)};
 const act=()=>{const v=vids[slot];if(!started){if(visible&&!document.hidden)start();return}
  if(visible&&!document.hidden)tryPlay(v);else v.pause()};
-/* Reprodução automática bloqueada (ex.: economia de bateria): tenta de novo no primeiro toque; até lá, fica o pôster estático. */
+/* Autoplay bloqueado (ex.: economia de bateria): fica o pôster estático e tenta de novo no primeiro toque. */
 ['pointerdown','touchend','keydown'].forEach(t=>document.addEventListener(t,()=>{if(blocked&&visible){blocked=false;tryPlay(vids[slot])}},{passive:true}));
-mq.addEventListener&&mq.addEventListener('change',()=>{vids.forEach(v=>{if(v.dataset.clip!==undefined)frame(v,+v.dataset.clip)});showBg(cur)});
 if('IntersectionObserver' in window){new IntersectionObserver(es=>{visible=es[0].isIntersecting;act()},{rootMargin:'160px 0px',threshold:0}).observe(reel)}else{visible=true;act()}
 document.addEventListener('visibilitychange',act);
 })();
